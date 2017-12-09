@@ -3,7 +3,7 @@ package day2_test
 import (
 	"testing"
 
-	"github.com/peterstark72/aoc2017/day2"
+	"github.com/peterstark72/advent-of-code-2017/day2"
 )
 
 const input1 = `5	1	9	5
