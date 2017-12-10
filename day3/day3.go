@@ -124,7 +124,6 @@ func PartTwo(value int, max int) (res int) {
 			//We have a result
 			break
 		}
-		fmt.Println(p, res)
 		matris[p.X][p.Y] = res
 	}
 
