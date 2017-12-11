@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+//IsAnagram returns true of s1 and s2 are anagrams
 func IsAnagram(s1 string, s2 string) bool {
 
 	if len(s1) != len(s2) {
@@ -25,34 +26,7 @@ func IsAnagram(s1 string, s2 string) bool {
 	return false
 }
 
-//isValid returns true if row is a valid passcode
-func isValid(row string) bool {
-
-	seen := make(map[string]bool)
-	words := strings.Split(row, " ")
-	for _, w := range words {
-		if seen[w] {
-			return false
-		}
-		seen[w] = true
-	}
-	return true
-}
-
-//PartOne returns num of valid passcodes
-func PartOne(input string) (result int) {
-
-	scanner := bufio.NewScanner(strings.NewReader(input))
-	for scanner.Scan() {
-		row := scanner.Text()
-		if isValid(row) {
-			result++
-		}
-	}
-
-	return
-}
-
+//isvalid2 returns true if row is a valid passcode (part 2)
 func isValid2(row string) bool {
 	words := strings.Split(row, " ")
 	for i := 0; i < len(words); i++ {
